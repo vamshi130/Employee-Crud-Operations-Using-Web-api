@@ -1,0 +1,12 @@
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\DataModelsEmployee.dll.config
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\DataModelsEmployee.dll
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\DataModelsEmployee.pdb
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\EntityFramework.dll
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\EntityFramework.xml
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\obj\Debug\DataModelsEmployee.csprojAssemblyReference.cache
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\obj\Debug\DataModelsEmployee.csproj.CoreCompileInputs.cache
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\obj\Debug\DataModelsEmployee.csproj.CopyComplete
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\obj\Debug\DataModelsEmployee.dll
+C:\Users\vamshi kunuguntla\source\repos\DataModelsEmployee\obj\Debug\DataModelsEmployee.pdb

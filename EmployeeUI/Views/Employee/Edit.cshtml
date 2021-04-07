@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+
+            <div class="form-horizontal">
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="Name" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>PhoneNumber</label>
+                        <input type="text" id="PhoneNumber" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" id="Country" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input type="text" id="Description" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <input type="button" id="Edit" value="Edit" class="btn btn-primary" />
+                        <a href="Index/Employee" class="btn btn-primary">Back</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var Organid =@ViewBag.id
+            $.ajax({
+                url: "https://localhost:44395/api/Employee/GetByEmployeeID/"+ Organid,
+                method: "Get",
+                dataType: "Json",
+                contentType: "application/Json",
+                success: function (data) {
+                    $("#Name").attr("value", data.Name);
+                    $("#PhoneNumber").attr("value", data.PhoneNumber);
+                    $("#Country").attr("value", data.Country);
+                    $("#Description").attr("value", data.Description);
+                }
+
+            });
+        $("#Edit").click(function () {
+            var obj = new Object();
+            obj["Id"] = Organid;
+            obj["Name"] = $("#Name").val();
+            obj["PhoneNumber"] = $("#PhoneNumber").val();
+            obj["Country"] = $("#Country").val();
+            obj["Description"] = $("#Description").val();
+            $.ajax({
+                url: "https://localhost:44395/api/Employee/EditEmployee/",
+                method: "Put",
+                //dataType: "Json",
+                data: JSON.stringify(obj),
+                contentType: "application/Json",
+                success: function (data) {
+                    alert("data saved succesfully")
+
+                }
+            });
+        });
+    });
+</script>
+
+

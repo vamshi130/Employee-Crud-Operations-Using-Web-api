@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+<div>
+    <form>
+        <div class="form-group">
+            <label>UserName</label>
+            <input type="text" id="UserName" placeholder="UserName" class="form-control" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password"  id="Password" placeholder="Password" class="form-control" />
+
+        </div>
+        <div>
+            <input type="button" id="Login" value="Login" class="btn btn-primary form-control" />
+        </div>
+    </form>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Login").click(function () {
+            $.ajax({
+                url: "https://localhost:44395/token",
+                method: "post",
+                contentType:"application/Json",
+                data: {
+                    UserName: $("#UserName").val(),
+                    Password: $("#Password").val(),
+                    grant_type:"password"
+                },
+                success: function (data) {
+                    sessionStorage.setItem('accessToken', data.access_token);
+                    window.location.href="/Employee/Index";
+                    
+                },
+                error: function (error) {
+                    alert("login failed");
+                }
+
+            })
+        })
+    })
+</script>

@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Create", "Create", "Employee", new { @class = "btn btn-primary" });
+<input type="button" class="btn btn-primary pull-right" id="logout" value="LogOut"/> 
+<table class="table" >
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            PhoneNumber
+        </th>
+        <th>
+            Country
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    <tbody id="tablebody"></tbody>
+</table>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (sessionStorage.getItem('accessToken') == null) {
+            window.location.href = "/LoginUI/Login";
+        }
+        $("#logout").click(function () {
+            sessionStorage.removeItem('accessToken');
+            window.location.href = "/LoginUI/Login";
+        })
+        $.ajax({
+            
+            url: "https://localhost:44395/api/Employee/GetEmployee",
+            method: "get",
+            dataType: "json",
+            headers: {
+                'Authorization': 'Bearer' + sessionStorage.getItem('accessToken')
+            },
+            success: function (data) {
+                var tableData = $("#tablebody");
+                tableData.empty();
+                $.each(data, function (index, obj) {
+                    //$("#divhead").removeClass('hidden');
+                    tableData.append(
+                        '<tr>'
+                        + '<td>' + obj.Name + '</td>'
+                        + '<td>' + obj.PhoneNumber + '</td>'
+                        + '<td>' + obj.Country + '</td>'
+                        + '<td>' + obj.Description + '</td>'
+                        + '<td>' + '<a class="btn btn-primary" href="/Employee/Edit/' + obj.Id + '">Edit</a>|<button type="button" class="btn btn-danger" onclick="Delete(' + obj.Id + ')">Delete</button>'
+                        + '</td>'
+                        + '</tr>'
+                    );
+
+                });
+            },
+        });
+        function Delete(data) {
+
+            $.ajax({
+                url: "https://localhost:44395/api/Employee/DeleteEmployee/" + data,
+                method: "Delete",
+                dataType: "Json",
+                contentType: "Json",
+                success: function (data) {
+                    alert("deleted succesfully");
+                    window.location.reload(true);
+                }
+            });
+
+
+        }
+    })
+
+</script>

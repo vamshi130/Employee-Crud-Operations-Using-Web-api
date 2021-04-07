@@ -1,0 +1,15 @@
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataAccessEmployees.dll.config
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataAccessEmployees.dll
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataAccessEmployees.pdb
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataModelsEmployee.dll
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\EntityFramework.dll
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataModelsEmployee.pdb
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\DataModelsEmployee.dll.config
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\EntityFramework.xml
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\obj\Debug\DataAccessEmployees.csprojAssemblyReference.cache
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\obj\Debug\DataAccessEmployees.csproj.CoreCompileInputs.cache
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\obj\Debug\DataAccessEmployees.csproj.CopyComplete
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\obj\Debug\DataAccessEmployees.dll
+C:\Users\vamshi kunuguntla\source\repos\DataAccessEmployees\obj\Debug\DataAccessEmployees.pdb

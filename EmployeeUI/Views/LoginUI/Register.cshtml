@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<form>
+    <div class="form-horizontal">
+        <div>
+            <label>Email</label>
+            <input type="text" id="Email" class="form-control" />
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="text" id="Password" class="form-control" />
+        </div>
+
+        <div>
+            <label>ConfirmPassword</label>
+            <input type="text" id="ConfirmPassword" class="form-control" />
+        </div>
+        <div>
+            <input type="button" value="Register" id="Register" class="form-control" />
+        </div>
+    </div>
+
+</form>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Register").click(function () {
+            debugger;
+            $.ajax({
+                url: "https://localhost:44395/api/Account/Register",
+                method: "post",
+                //dataType: "Json",
+                //contentType: "application/Json",
+                data: {
+                    Email: $("#Email").val(),
+                    Password: $("#Password").val(),
+                    ConfirmPassword: $("#ConfirmPassword").val()
+                },
+                success: function (response) {
+                    alert("Registered successfully");
+                },
+                error: function (xhr) {
+                    alert("Error");
+                }
+
+            })
+        })
+    })
+</script>
